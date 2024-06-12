@@ -20,7 +20,7 @@ public class EmployeeDAO {
              ResultSet rs = stmt.executeQuery()) {
 
             while (rs.next()) {
-                Employee employee = new Employee(rs.getInt("employee_id"), rs.getString("first_name"), rs.getString("last_name"), rs.getString("driver_license"), rs.getInt("company_id"));
+                Employee employee = new Employee(rs.getLong("employee_id"), rs.getString("first_name"), rs.getString("last_name"), rs.getString("driver_license"), rs.getInt("company_id"));
                 employees.add(employee);
             }
         }

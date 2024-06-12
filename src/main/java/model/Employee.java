@@ -1,13 +1,13 @@
 package model;
 
 public class Employee {
-    private int employeeId;
+    private long employeeId;
     private String firstName;
     private String lastName;
     private String driverLicense;
     private int companyId;
 
-    public Employee(int employeeId, String firstName, String lastName, String driverLicense, int companyId) {
+    public Employee(long employeeId, String firstName, String lastName, String driverLicense, int companyId) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -15,11 +15,11 @@ public class Employee {
         this.companyId = companyId;
     }
 
-    public int getEmployeeId() {
+    public long getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(int employeeId) {
+    public void setEmployeeId(long employeeId) {
         this.employeeId = employeeId;
     }
 
@@ -54,5 +54,4 @@ public class Employee {
     public void setCompanyId(int companyId) {
         this.companyId = companyId;
     }
-
 }
