@@ -10,6 +10,23 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class EmployeeCRUDTest {
 
+    /*
+    This test case will verify the CRUD (Create, Read, Update, Delete) operations for the Employees table. It will check that we can perform these operations successfully and validate the changes in the database.
+
+    Test Case: CRUD Operations
+
+    Objective:
+    Ensure that the CRUD operations for the Employees table work as expected.
+
+    Steps:
+    Create a new employee record.
+    Read the employee record to ensure it was created.
+    Update the employee record.
+    Read the employee record to ensure it was updated.
+    Delete the employee record.
+    Ensure the employee record was deleted.
+     */
+
     @Test
     public void testEmployeeCRUDOperations() throws SQLException {
         EmployeeDAO employeeDAO = new EmployeeDAO();
