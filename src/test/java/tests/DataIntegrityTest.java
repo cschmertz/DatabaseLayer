@@ -7,6 +7,9 @@ import model.Company;
 import model.Employee;
 import model.Vehicle;
 import org.junit.jupiter.api.Test;
+import service.CompanyService;
+import service.EmployeeService;
+import service.VehicleService;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -48,14 +51,14 @@ Test Steps:
 
     @Test
     public void testDataIntegrity() throws SQLException {
-        // Fetch data from the tables
-        CompanyDAO companyDAO = new CompanyDAO();
-        EmployeeDAO employeeDAO = new EmployeeDAO();
-        VehicleDAO vehicleDAO = new VehicleDAO();
+        // Fetch data from the services
+        CompanyService companyService = new CompanyService();
+        EmployeeService employeeService = new EmployeeService();
+        VehicleService vehicleService = new VehicleService();
 
-        List<Company> companies = companyDAO.getAllCompanies();
-        List<Employee> employees = employeeDAO.getAllEmployees();
-        List<Vehicle> vehicles = vehicleDAO.getAllVehicles();
+        List<Company> companies = companyService.getAllCompanies();
+        List<Employee> employees = employeeService.getAllEmployees();
+        List<Vehicle> vehicles = vehicleService.getAllVehicles();
 
         // Ensure data is not null
         assertNotNull(companies);
@@ -106,13 +109,13 @@ Test Steps:
     @Test
     public void testCompanyEmployeeVehicleConsistency() throws SQLException {
         // Fetch data from the tables
-        CompanyDAO companyDAO = new CompanyDAO();
-        EmployeeDAO employeeDAO = new EmployeeDAO();
-        VehicleDAO vehicleDAO = new VehicleDAO();
+        CompanyService companyService = new CompanyService();
+        EmployeeService employeeService = new EmployeeService();
+        VehicleService vehicleService = new VehicleService();
 
-        List<Company> companies = companyDAO.getAllCompanies();
-        List<Employee> employees = employeeDAO.getAllEmployees();
-        List<Vehicle> vehicles = vehicleDAO.getAllVehicles();
+        List<Company> companies = companyService.getAllCompanies();
+        List<Employee> employees = employeeService.getAllEmployees();
+        List<Vehicle> vehicles = vehicleService.getAllVehicles();
 
         // Ensure data is not null
         assertNotNull(companies);

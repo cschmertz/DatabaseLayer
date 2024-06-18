@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CompanyDAO {
+
     public List<Company> getAllCompanies() throws SQLException {
         String query = "SELECT * FROM Companies";
         List<Company> companies = new ArrayList<>();
