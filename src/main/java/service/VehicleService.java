@@ -6,7 +6,7 @@ import model.Vehicle;
 import java.sql.SQLException;
 import java.util.List;
 
-public class VehicleService {
+public class VehicleService implements IVehicleService{
 
     private VehicleDAO vehicleDAO = new VehicleDAO();
 

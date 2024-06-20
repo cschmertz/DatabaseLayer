@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CompanyDAO {
+public class CompanyDAO implements ICompanyDAO {
 
     public List<Company> getAllCompanies() throws SQLException {
         String query = "SELECT * FROM Companies";

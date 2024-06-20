@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VehicleDAO {
+public class VehicleDAO implements IVehicleDAO{
 
     public List<Vehicle> getAllVehicles() throws SQLException {
         String query = "SELECT * FROM Vehicles";

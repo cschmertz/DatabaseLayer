@@ -6,7 +6,7 @@ import model.Company;
 import java.sql.SQLException;
 import java.util.List;
 
-public class CompanyService {
+public class CompanyService implements ICompanyService{
 
     private CompanyDAO companyDAO = new CompanyDAO();
 

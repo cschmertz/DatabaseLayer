@@ -6,7 +6,7 @@ import model.Employee;
 import java.sql.SQLException;
 import java.util.List;
 
-public class EmployeeService {
+public class EmployeeService implements IEmployeeService{
 
     private EmployeeDAO employeeDAO = new EmployeeDAO();
 
